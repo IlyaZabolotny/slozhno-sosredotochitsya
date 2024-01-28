@@ -2,4 +2,192 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color, #000028);
+  color: var(--text-color, #f1b2ce);
+  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+}
+
+.header {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 25px 203px 192px 203px 25px;
+}
+
+.decorated-zone {
+  background: var(--header-image);
+  background-repeat: no-repeat;
+  object-position: center;
+  background-size: cover;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-family: var(--main-font);
+  font-size: 116px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+}
+
+.decorated-header-top__corners {
+  position: relative;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-header-bottom__corners {
+  position: relative;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.decorated-header-bottom__container {
+  display: grid;
+  grid-template-columns: 25px;
+  justify-content: start;
+}
+
+.decorated-header__container {
+  display: grid;
+  grid-template-columns: 33px 25px;
+  justify-content: end;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.title-decor_container {
+  padding-top: 55px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  padding-top: 41px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button {
+  padding: 0 13px;
+}
+
+@media(width >= 700px) {
+
+  .header {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 25px 417px 99px 417px 25px;
+  }
+
+  .header__theme-menu {
+    padding-top: 148px;
+  }
+
+  .title-decor_container {
+    padding-top: 162px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header__title {
+    margin-left: -15px;
+  }
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    color: var(--title-color);
+    text-shadow: 4px 4px 0px var(--accent-color);
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 82.5%;
+  }
+
+  .title-decor {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23.4px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-self: start;
+  }
+}
+
+@media(width >= 1020px) {
+  .header {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 25px 517px 160px 25px;
+    grid-template-columns: 1fr 58px;
+  }
+
+  .decorated-header__container {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .header__theme-menu {
+    grid-row: 1;
+    grid-column: 1;
+    padding-top: 0;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 57px;
+  }
+
+  .header__title {
+    grid-column: 1;
+    grid-row: 2;
+    padding-top: 275px;
+  }
+
+  .title-decor_container {
+    grid-column: 1/4;
+    grid-row: 3;
+    padding: 0px;
+    justify-self: end;
+  }
+
+  .decorated-header-bottom__container {
+    grid-column: 1;
+    grid-row: 4;
+  }
 }

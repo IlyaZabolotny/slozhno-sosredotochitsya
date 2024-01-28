@@ -9,4 +9,63 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --text-color: #f1b2ce;
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --main-font: "IBM Plex mono", "Arial", sans-serif;
+  --header-image: url(../images/cover-image-dark.png);
+
+  .decorated-header-top__corners::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    top: 6px;
+    right: 5px;
+    filter: drop-shadow(0px 0px 4px var(--accent-color));
+    background-color: var(--accent-color);
+  }
+
+  .decorated-header__text {
+    color: var(--accent-color);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    position: relative;
+  }  
+}
+
+@media (prefers-color-scheme: dark) {
+  .page.theme_auto {
+    --text-color: #f1b2ce;
+    --bg-color: #000028;
+    --accent-color: #ff0070;
+    --title-color: #db00ff;
+    --main-font: "IBM Plex mono", "Arial", sans-serif;
+    --header-image: url(../images/cover-image-dark.png);
+  
+    .decorated-header-top__corners::after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      top: 6px;
+      right: 5px;
+      filter: drop-shadow(0px 0px 4px var(--accent-color));
+      background-color: var(--accent-color);
+    }
+
+    .decorated-header__text {
+      color: var(--accent-color);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      position: relative;
+    }
+  }
 }
