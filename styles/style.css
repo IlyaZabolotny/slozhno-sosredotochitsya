@@ -5,7 +5,7 @@
   background-color: var(--bg-color, #000028);
   color: var(--text-color, #f1b2ce);
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
-  background-attachment: fixed
+  background-attachment: fixed;
 }
 
 .header {
@@ -26,7 +26,6 @@
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--accent-color);
   font-family: var(--main-font);
-  font-size: 116px;
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
@@ -96,8 +95,7 @@
   border: 1px solid var(--accent-color);
 }
 
-@media(width >= 700px) {
-
+@media (width >= 700px) {
   .header {
     padding: 20px;
     display: grid;
@@ -115,10 +113,6 @@
   }
 
   .header__title {
-    margin-left: -15px;
-  }
-
-  .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     color: var(--title-color);
     text-shadow: 4px 4px 0px var(--accent-color);
@@ -126,6 +120,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 82.5%;
+    margin-left: -15px;
   }
 
   .title-decor {
@@ -140,7 +135,7 @@
   }
 }
 
-@media(width >= 1020px) {
+@media (width >= 1020px) {
   .header {
     padding: 20px;
     display: grid;
