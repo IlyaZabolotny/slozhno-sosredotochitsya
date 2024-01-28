@@ -5,6 +5,7 @@
   background-color: var(--bg-color, #000028);
   color: var(--text-color, #f1b2ce);
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  background-attachment: fixed
 }
 
 .header {
@@ -81,6 +82,7 @@
 
 .header__theme-menu-button {
   background-color: transparent;
+  padding: 0 13px;
   border: none;
   color: var(--accent-color);
   text-align: center;
@@ -92,10 +94,6 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
-}
-
-.header__theme-menu-button {
-  padding: 0 13px;
 }
 
 @media(width >= 700px) {
@@ -137,8 +135,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 23.4px;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column: 2;
     align-self: start;
   }
 }

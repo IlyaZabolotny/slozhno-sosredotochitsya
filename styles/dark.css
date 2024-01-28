@@ -35,7 +35,8 @@
     font-weight: 400;
     line-height: 25px;
     position: relative;
-  }  
+  }
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,7 +47,7 @@
     --title-color: #db00ff;
     --main-font: "IBM Plex mono", "Arial", sans-serif;
     --header-image: url(../images/cover-image-dark.png);
-  
+
     .decorated-header-top__corners::after {
       content: "";
       position: absolute;
