@@ -36,6 +36,10 @@
     line-height: 25px;
     position: relative;
   }
+
+  .section__header {
+    color: var(--accent-color)
+  }
 }
 
 @media (prefers-color-scheme: dark) {
