@@ -9,6 +9,7 @@
 }
 
 .header {
+  height: 100%;
   padding: 10px;
   display: grid;
   grid-template-rows: 25px 203px 192px 203px 25px;
@@ -126,6 +127,10 @@
   grid-template-rows: min-content repeat(2, 1fr);
   grid-template-columns: 1fr;
   row-gap: 20px;
+}
+
+.footer {
+  height: 100%;
 }
 
 @media (width >= 700px) {
