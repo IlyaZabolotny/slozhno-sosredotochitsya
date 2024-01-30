@@ -145,6 +145,74 @@
   font-weight: 400;
 }
 
+.pictures__section {
+  padding: 0px 10px;
+  display: grid;
+  grid-template-rows: 6fr;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+.sunset-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ice-cream-image {
+  height: 355px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tape-image {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.books-image {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.street-image {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 25px 598px 25px;
+}
+
+.footer .decorated-header__container {
+  display: grid;
+  grid-template-columns: 25px;
+  justify-content: end;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  justify-self: center;
+  align-self: center;
+}
+
 @media (width >= 700px) {
   .header {
     padding: 20px;
@@ -221,6 +289,71 @@
   .advice-section__content {
     grid-column: 2;
     padding-left: 20px;
+  }
+
+  .pictures__section {
+    padding: 0px 20px;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .image__header {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+
+  .sunset__container {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+
+  .ice-cream__container {
+    grid-row: 2/4;
+    grid-column: 3;
+  }
+
+  .tape__container {
+    grid-row: 3/6;
+    grid-column: 1;
+  }
+
+  .street__container {
+    grid-column: 2/4;
+    grid-row: 4;
+  }
+
+  .sunset-image {
+    width: 100%;
+    height: 192px;
+  }
+
+  .ice-cream-image {
+    height: 441px;
+    width: 100%;
+  }
+
+  .tape-image {
+    height: 568px;
+    width: 100%;
+  }
+
+  .books-image {
+    height: 230px;
+    width: 100%;
+  }
+
+  .street-image {
+    height: 318px;
+    width: 100%;
+  }
+
+  .footer {
+    margin-top: 30px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 25px 933px 25px;
   }
 }
 
@@ -305,6 +438,50 @@
   .advice__section {
     display: grid;
     grid-template-rows: min-content 1fr;
-    grid-template-columns: 314px 1fr ;
+    grid-template-columns: 314px 1fr;
+  }
+
+  .sunset-image {
+    width: 100%;
+    height: 260px;
+  }
+
+  .ice-cream-image {
+    height: 595px;
+    width: 100%;
+  }
+
+  .tape-image {
+    height: 768px;
+    width: 100%;
+  }
+
+  .books-image {
+    height: 315px;
+    width: 100%;
+  }
+
+  .street-image {
+    height: 428px;
+    width: 100%;
+  }
+
+  .footer {
+    margin-top: 30px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 25px 677px 25px;
+    grid-template-columns: 1fr;
+  }
+
+  .footer .decorated-header-bottom__container {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    grid-row: 2;
+    grid-column: 1;
   }
 }

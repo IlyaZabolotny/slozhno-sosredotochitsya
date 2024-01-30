@@ -28,6 +28,10 @@
     background-color: var(--accent-color);
   }
 
+  .footer .decorated-header-top__corners::after {
+    display: none;
+  }
+
   .decorated-header__text {
     color: var(--accent-color);
     font-size: 18px;
@@ -38,7 +42,7 @@
   }
 
   .section__header {
-    color: var(--accent-color)
+    color: var(--accent-color);
   }
 }
 
