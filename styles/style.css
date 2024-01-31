@@ -1,9 +1,7 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: var(--bg-color, #000028);
-  color: var(--text-color, #f1b2ce);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
   background-attachment: fixed;
 }
@@ -11,8 +9,8 @@
 .header {
   padding: 10px;
   display: grid;
-  grid-template-rows: 25px 203px 192px 203px 25px;
-  height: 100%;
+  grid-template-rows: 25px 1fr 1fr 1fr 25px;
+  block-size: max(668px,100vh);
 }
 
 .decorated-zone {
@@ -20,7 +18,6 @@
   background-repeat: no-repeat;
   object-position: center;
   background-size: cover;
-  height: 100%;
 }
 
 .header__title {
@@ -91,10 +88,32 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  text-transform: lowercase;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible::after {
+  content: " ";
+  position: absolute;
+  inline-size: 100%;
+  block-size: 1px;
+  background-color: var(--nav-color);
+  inset-block-end: -2px;
+  inset-inline-start: 0;
+}
+
+.header__theme-menu-button:hover {
+  --nav-hover-color: rgb(255 0 112/0.4);
+
+  border: 1px solid var(--nav-hover-color);
 }
 
 .reasons__section {
@@ -194,8 +213,8 @@
   margin-top: 40px;
   padding: 10px;
   display: grid;
-  grid-template-rows: 25px 598px 25px;
-  height: 100%;
+  grid-template-rows: 25px 1fr 25px;
+  block-size: max(668px, 100vh);
 }
 
 .footer .decorated-header__container {
@@ -216,11 +235,28 @@
   align-self: center;
 }
 
+.content__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.content__link:hover {
+  border-block-end: 1px solid var(--text-color);
+}
+
+.content__link:focus {
+  outline: none;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
 @media (width >= 700px) {
   .header {
     padding: 20px;
     display: grid;
-    grid-template-rows: 25px 417px 99px 417px 25px;
+    grid-template-rows: 25px 1fr 1fr 1fr 25px;
   }
 
   .header__theme-menu {
@@ -356,7 +392,7 @@
     margin-top: 30px;
     padding: 20px;
     display: grid;
-    grid-template-rows: 25px 933px 25px;
+    grid-template-rows: 25px 1fr 25px;
   }
 }
 
@@ -364,7 +400,7 @@
   .header {
     padding: 20px;
     display: grid;
-    grid-template-rows: 25px 517px 160px 25px;
+    grid-template-rows: 25px 1fr 1fr 25px;
     grid-template-columns: 1fr 58px;
   }
 
@@ -473,7 +509,7 @@
     margin-top: 30px;
     padding: 20px;
     display: grid;
-    grid-template-rows: 25px 677px 25px;
+    grid-template-rows: 25px 1fr 25px;
     grid-template-columns: 1fr;
   }
 
