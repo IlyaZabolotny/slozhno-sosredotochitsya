@@ -3,11 +3,6 @@
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--main-font, "IBM Plex mono", "Monaco", monospace);
-  background-attachment: fixed;
-  background: var(--header-image);
-  background-repeat: no-repeat;
-  object-position: center;
-  background-size: cover;
 }
 
 .header {
@@ -15,6 +10,11 @@
   display: grid;
   grid-template-rows: 25px 1fr 1fr 1fr 25px;
   block-size: max(668px, 100vh);
+  background-attachment: fixed;
+  background: var(--header-image);
+  background-repeat: no-repeat;
+  object-position: center;
+  background-size: cover;
 }
 
 .header__title {
