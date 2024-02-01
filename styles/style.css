@@ -2,22 +2,19 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: var(--main-font, "IBM Plex mono", "Arial", sans-serif);
+  font-family: var(--main-font, "IBM Plex mono", "Monaco", monospace);
   background-attachment: fixed;
+  background: var(--header-image);
+  background-repeat: no-repeat;
+  object-position: center;
+  background-size: cover;
 }
 
 .header {
   padding: 10px;
   display: grid;
   grid-template-rows: 25px 1fr 1fr 1fr 25px;
-  block-size: max(668px,100vh);
-}
-
-.decorated-zone {
-  background: var(--header-image);
-  background-repeat: no-repeat;
-  object-position: center;
-  background-size: cover;
+  block-size: max(668px, 100vh);
 }
 
 .header__title {
@@ -100,14 +97,8 @@
   outline: none;
 }
 
-.header__theme-menu-button:focus-visible::after {
-  content: " ";
-  position: absolute;
-  inline-size: 100%;
-  block-size: 1px;
-  background-color: var(--nav-color);
-  inset-block-end: -2px;
-  inset-inline-start: 0;
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--text-color);
 }
 
 .header__theme-menu-button:hover {
@@ -255,7 +246,6 @@
 @media (width >= 700px) {
   .header {
     padding: 20px;
-    display: grid;
     grid-template-rows: 25px 1fr 1fr 1fr 25px;
   }
 
@@ -264,29 +254,18 @@
   }
 
   .title-decor_container {
-    padding-top: 162px;
     display: grid;
+    padding-top: 162px;
     grid-template-columns: 1fr 1fr;
   }
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    color: var(--title-color);
-    text-shadow: 4px 4px 0px var(--accent-color);
-    font-family: var(--main-font);
-    font-style: normal;
-    font-weight: 700;
     line-height: 82.5%;
     margin-left: -15px;
   }
 
   .title-decor {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 23.4px;
     grid-column: 2;
     align-self: start;
   }
@@ -294,7 +273,6 @@
   .reasons__section {
     padding: 0px 20px;
     margin: 60px 0 80px;
-    display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: 236px 1fr;
     row-gap: 20px;
@@ -307,7 +285,6 @@
 
   .subject__section {
     padding: 0px 20px;
-    display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: 236px 1fr;
     row-gap: 20px;
@@ -320,7 +297,6 @@
   .advice__section {
     margin: 80px 0;
     padding: 0 20px;
-    display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: 236px 1fr;
   }
@@ -364,42 +340,34 @@
   }
 
   .sunset-image {
-    width: 100%;
     height: 192px;
   }
 
   .ice-cream-image {
     height: 441px;
-    width: 100%;
   }
 
   .tape-image {
     height: 568px;
-    width: 100%;
   }
 
   .books-image {
     height: 230px;
-    width: 100%;
   }
 
   .street-image {
     height: 318px;
-    width: 100%;
   }
 
   .footer {
     margin-top: 30px;
     padding: 20px;
-    display: grid;
     grid-template-rows: 25px 1fr 25px;
   }
 }
 
 @media (width >= 1020px) {
   .header {
-    padding: 20px;
-    display: grid;
     grid-template-rows: 25px 1fr 1fr 25px;
     grid-template-columns: 1fr 58px;
   }
@@ -445,18 +413,10 @@
   }
 
   .reasons__section {
-    grid-template-rows: min-content 1fr;
     grid-template-columns: 314px 1fr;
   }
 
-  .reasons-section__content {
-    grid-column: 2;
-    padding-left: 20px;
-  }
-
   .subject__section {
-    padding: 0px 20px;
-    display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
@@ -475,41 +435,30 @@
   }
 
   .advice__section {
-    display: grid;
-    grid-template-rows: min-content 1fr;
     grid-template-columns: 314px 1fr;
   }
 
   .sunset-image {
-    width: 100%;
     height: 260px;
   }
 
   .ice-cream-image {
     height: 595px;
-    width: 100%;
   }
 
   .tape-image {
     height: 768px;
-    width: 100%;
   }
 
   .books-image {
     height: 315px;
-    width: 100%;
   }
 
   .street-image {
     height: 428px;
-    width: 100%;
   }
 
   .footer {
-    margin-top: 30px;
-    padding: 20px;
-    display: grid;
-    grid-template-rows: 25px 1fr 25px;
     grid-template-columns: 1fr;
   }
 

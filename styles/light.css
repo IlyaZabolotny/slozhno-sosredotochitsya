@@ -14,7 +14,7 @@
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
   --nav-color: #353430;
-  --main-font: "IBM Plex mono", "Arial", sans-serif;
+  --main-font: "IBM Plex mono", "Monaco", monospace;
   --header-image: url(../images/cover-image-light.png);
 }
 
@@ -56,6 +56,10 @@
   --nav-hover-color: rgb(50 49 45 / 0.4);
 }
 
+.theme_light .section__header {
+  color: var(--text-color);
+}
+
 /* Остальные стили */
 @media (prefers-color-scheme: light) {
   :root {
@@ -64,19 +68,27 @@
     --accent-color: #ff8dcb;
     --title-color: #ffc2e6;
     --nav-color: #353430;
-    --main-font: "IBM Plex mono", "Arial", sans-serif;
+    --main-font: "IBM Plex mono", "Monaco", monospace;
     --header-image: url(../images/cover-image-light.png);
   }
 
-  .decorated-header__container {
+  .theme_light .decorated-header__container {
     grid-template-columns: 25px;
   }
 
-  .decorated-header-top__corners::after {
+  .theme_light .decorated-header-top__corners::after {
     display: none;
   }
 
-  .decorated-header__text {
+  .theme_light .decorated-header__text {
+    display: none;
+  }
+
+  .theme_auto .decorated-header__container {
+    grid-template-columns: 25px;
+  }
+
+  .theme_auto .decorated-header__text {
     display: none;
   }
 
@@ -102,7 +114,24 @@
     border: 1px solid var(--text-color);
   }
 
+  .theme_dark .decorated-header__container {
+    grid-template-columns: 33px 25px;
+  }
+
+  .theme_dark .decorated-header__text {
+    color: var(--accent-color);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    position: relative;
+  }
+
   .theme_light .header__theme-menu-button:hover {
+    --nav-hover-color: rgb(50 49 45 / 0.4);
+  }
+
+  .theme_auto .header__theme-menu-button:hover {
     --nav-hover-color: rgb(50 49 45 / 0.4);
   }
 }
