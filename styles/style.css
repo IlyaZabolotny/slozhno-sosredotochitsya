@@ -3,6 +3,7 @@
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--main-font, "IBM Plex mono", "Monaco", monospace);
+  background-attachment: fixed;
 }
 
 .header {
