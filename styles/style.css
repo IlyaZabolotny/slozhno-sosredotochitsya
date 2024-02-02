@@ -175,7 +175,7 @@
 }
 
 .footer {
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 10px;
   display: grid;
   grid-template-rows: 25px 1fr 25px;
