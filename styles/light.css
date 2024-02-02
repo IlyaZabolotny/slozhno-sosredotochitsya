@@ -18,48 +18,6 @@
   --header-image: url(../images/cover-image-light.png);
 }
 
-.theme_light .decorated-header__container {
-  grid-template-columns: 25px;
-}
-
-.theme_light .decorated-header-top__corners::after {
-  display: none;
-}
-
-.theme_light .decorated-header__text {
-  display: none;
-}
-
-.theme_light .decorated-header-top__corners {
-  border-top: 1px solid var(--text-color);
-  border-right: 1px solid var(--text-color);
-}
-
-.theme_light .decorated-header-bottom__corners {
-  border-bottom: 1px solid var(--text-color);
-  border-left: 1px solid var(--text-color);
-}
-
-.theme_light .title-decor {
-  color: var(--text-color);
-}
-
-.theme_light .header__theme-menu-button {
-  color: var(--text-color);
-}
-
-.theme_light .header__theme-menu-button_active {
-  border: 1px solid var(--text-color);
-}
-
-.theme_light .header__theme-menu-button:hover {
-  --nav-hover-color: rgb(50 49 45 / 0.4);
-}
-
-.theme_light .section__header {
-  color: var(--text-color);
-}
-
 /* Остальные стили */
 @media (prefers-color-scheme: light) {
   :root {

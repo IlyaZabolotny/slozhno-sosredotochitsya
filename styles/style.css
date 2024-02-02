@@ -77,6 +77,7 @@
 }
 
 .header__theme-menu-button {
+  cursor: pointer;
   background-color: transparent;
   padding: 0 13px;
   border: none;
@@ -166,37 +167,9 @@
   row-gap: 10px;
 }
 
-.sunset-image {
+.grid-image {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.ice-cream-image {
-  height: 355px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.tape-image {
-  height: 230px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.books-image {
-  height: 350px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.street-image {
-  height: 230px;
-  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -218,7 +191,7 @@
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--title-color);
-  text-shadow: 4px 4px 0px var(--accent-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
@@ -244,6 +217,103 @@
   outline: 1px solid var(--text-color);
 }
 
+.theme_dark .decorated-header-top__corners::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  top: 6px;
+  right: 5px;
+  filter: drop-shadow(0px 0px 4px var(--accent-color));
+  background-color: var(--accent-color);
+}
+
+.theme_dark .footer .decorated-header-top__corners::after {
+  display: none;
+}
+
+.theme_dark .decorated-header__text {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  position: relative;
+}
+
+.theme_dark .section__header {
+  color: var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--nav-color);
+}
+
+.theme_dark .header__theme-menu-button:hover {
+  --nav-hover-color: rgb(225 0 112/ 0.4);
+}
+
+.theme_dark .decorated-header-top__corners {
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.theme_dark .decorated-header-bottom__corners {
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.theme_dark .title-decor {
+  color: var(--bg-color);
+}
+
+.theme_light .decorated-header__container {
+  grid-template-columns: 25px;
+}
+
+.theme_light .decorated-header-top__corners::after {
+  display: none;
+}
+
+.theme_light .decorated-header__text {
+  display: none;
+}
+
+.theme_light .decorated-header-top__corners {
+  border-top: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
+}
+
+.theme_light .decorated-header-bottom__corners {
+  border-bottom: 1px solid var(--text-color);
+  border-left: 1px solid var(--text-color);
+}
+
+.theme_light .title-decor {
+  color: var(--text-color);
+}
+
+.theme_light .header__theme-menu-button {
+  color: var(--text-color);
+}
+
+.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--text-color);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  --nav-hover-color: rgb(50 49 45 / 0.4);
+}
+
+.theme_light .section__header {
+  color: var(--text-color);
+}
+
 @media (width >= 700px) {
   .header {
     padding: 20px;
@@ -256,14 +326,14 @@
 
   .title-decor_container {
     display: grid;
-    padding-top: 162px;
     grid-template-columns: 1fr 1fr;
   }
 
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 82.5%;
-    margin-left: -15px;
+    margin-left: -20px;
+    align-self: center;
   }
 
   .title-decor {
@@ -369,7 +439,7 @@
 
 @media (width >= 1020px) {
   .header {
-    grid-template-rows: 25px 1fr 1fr 25px;
+    grid-template-rows: 25px min-content 1fr 25px;
     grid-template-columns: 1fr 58px;
   }
 
@@ -406,6 +476,8 @@
     grid-row: 3;
     padding: 0px;
     justify-self: end;
+    align-self: center;
+    padding-top: 20px;
   }
 
   .decorated-header-bottom__container {
@@ -472,5 +544,6 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     grid-row: 2;
     grid-column: 1;
+    margin-left: 25px;
   }
 }
