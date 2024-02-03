@@ -15,7 +15,7 @@
   --title-color: #db00ff;
   --nav-color: #ff0070;
   --main-font: "IBM Plex mono", "Monaco", monospace;
-  --header-image: url(../images/cover-image-dark.png);
+  --header-image: url(../images/cover-image-dark.png);;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +26,7 @@
     --title-color: #db00ff;
     --nav-color: #ff0070;
     --main-font: "IBM Plex mono", "Monaco", monospace;
-    --header-image: none;
+    --header-image: url(../images/cover-image.png);
   }
 
   .footer .decorated-header-top__corners::after {
