@@ -30,6 +30,10 @@
     --header-image: url(../images/cover-image-light.png);
   }
 
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--text-color);
+  }
+
   .theme_light .decorated-header__container {
     grid-template-columns: 25px;
   }
@@ -74,6 +78,10 @@
 
   .theme_dark .decorated-header__container {
     grid-template-columns: 33px 25px;
+  }
+
+  .theme_dark .footer .decorated-header__container {
+    grid-template-columns: 25px;
   }
 
   .theme_dark .decorated-header__text {
